@@ -40,6 +40,9 @@ android {
 }
 
 dependencies {
+    //connection data and domain module with presentation module
+    implementation(project(":data"))
+    implementation(project(":domain"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -56,4 +59,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    //for android specific dependency of koin
+    implementation(libs.koin.android)
+    implementation(libs.koin.android.compose)
 }
